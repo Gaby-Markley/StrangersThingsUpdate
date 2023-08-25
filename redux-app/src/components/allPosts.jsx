@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { fetchPosts } from "../API";
+import { fetchAllPosts } from "../API/Index";
 
-export default function AllPosts() {
+export default function allPosts() {
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState(null);
   const [searchParam, setSearchParam] = useState("");
@@ -10,22 +10,22 @@ export default function AllPosts() {
     async function getAllPosts() {
       const APIResponse = await fetchAllPosts();
       if (APIResponse.success) {
-        setPlayers(APIResponse.data.posts);
+        setPosts(APIResponse.data.posts);
       } else {
         setError(APIResponse.error.message);
       }
     }
+
     getAllPosts();
   }, []);
-
+  // SEARCH BAR COMPONENT
   const postsToDisplay = searchParam
-    ? posts.filter(
-        (post) => post.name.toLowerCase().includes(searchParam)
-        // ^does this make sense? I don't want to search by name of the posts, do we?
-      )
+    ? posts.filter((post) => post.title.toLowerCase().includes(searchParam))
     : posts;
+
   return (
     <div>
+      {/* move to search bar component */}
       <div>
         <label>
           Search:{" "}
@@ -37,9 +37,17 @@ export default function AllPosts() {
         </label>
       </div>
       {error && <p>{error}</p>}
-      {postsToDisplay.map((post) => {
-        return <PlayerListName key={player.id} player={player} />;
-      })}
+      {postsToDisplay.map((post) => (
+        <div key={post.id}>
+          <h2>{post.title}</h2>
+          <p>{post.description}</p>
+          <p>{post.location}</p>
+          <p>{post.price}</p>
+          <p>{post.active}</p>
+          <p>{post.createdAt}</p>
+          <p>{post.updatedAt}</p>
+        </div>
+      ))}
     </div>
   );
 }

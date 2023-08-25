@@ -1,21 +1,23 @@
-import { Routes, Route } from "react-router";
-import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
 import AllPosts from "./components/AllPosts";
+import "./App.css";
+// import Home from "./components/home.jsx";
 // import SinglePost from "./components/singlePost";
-// import Nav from "./components/Nav";
 
-function App() {
-  console.log("app.jsx is loading!!!!");
+export default function App() {
+  // console.log("app.jsx is loading!!!!");
   return (
-    <div className="App">
-      <h1> Stranger's Things</h1>
-      {/* <Nav /> */}
-      <Routes>
-        <Route path="/" element={<AllPosts />} />
-        {/* <Route path="/id" element={<SinglePost />} /> */}
-      </Routes>
-    </div>
+    <>
+      <header>
+        {/* <h1> Stranger's Things</h1> */}
+        <Link to="/AllPosts"> Posts </Link>
+      </header>
+
+      <div>
+        <Routes>
+          <Route path="/AllPosts" element={<AllPosts />} />
+        </Routes>
+      </div>
+    </>
   );
 }
-
-export default App;
