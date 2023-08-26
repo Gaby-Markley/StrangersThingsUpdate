@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { fetchAllPosts } from "../API/Index";
+import { Navigate } from "react-router";
+// import Authenticate from "./Authentification";
 
 export default function allPosts() {
   const [posts, setPosts] = useState([]);
@@ -46,6 +48,13 @@ export default function allPosts() {
           <p>{post.active}</p>
           <p>{post.createdAt}</p>
           <p>{post.updatedAt}</p>
+          <button
+            onClick={() => {
+              navigate(`/posts/${post.id}`);
+            }}
+          >
+            Delete Post
+          </button>
         </div>
       ))}
     </div>
