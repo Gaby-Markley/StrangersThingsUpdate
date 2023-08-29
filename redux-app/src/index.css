@@ -29,6 +29,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/86406e76-dd9d-4351-a77f-5c326b7950d5/df8nwye-dd4917ee-fb85-4164-8c76-b3271a91b3da.png/v1/fill/w_512,h_800,q_80,strp/stranger_things_inspired_cover_background_by_persephades_df8nwye-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODAwIiwicGF0aCI6IlwvZlwvODY0MDZlNzYtZGQ5ZC00MzUxLWE3N2YtNWMzMjZiNzk1MGQ1XC9kZjhud3llLWRkNDkxN2VlLWZiODUtNDE2NC04Yzc2LWIzMjcxYTkxYjNkYS5wbmciLCJ3aWR0aCI6Ijw9NTEyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.pKyBR5GX0nC8veaMnDnYdNnGeGOJffsz3UXT_1Ljyxw");
+  background-size: 100%;
 }
 
 h1 {
@@ -67,4 +69,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
