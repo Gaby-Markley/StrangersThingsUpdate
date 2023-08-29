@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
-import { fetchAllPosts } from "../API/Index";
-import { Navigate } from "react-router";
-// import Authenticate from "./Authentification";
+import React, { useState, useEffect } from "react";
+import { fetchAllPosts } from "../API";
+import DeleteButton from "./Delete";
 
 export default function allPosts() {
   const [posts, setPosts] = useState([]);
@@ -27,7 +26,6 @@ export default function allPosts() {
 
   return (
     <div>
-      {/* move to search bar component */}
       <div>
         <label>
           Search:{" "}
@@ -48,13 +46,8 @@ export default function allPosts() {
           <p>{post.active}</p>
           <p>{post.createdAt}</p>
           <p>{post.updatedAt}</p>
-          <button
-            onClick={() => {
-              navigate(`/posts/${post.id}`);
-            }}
-          >
-            Delete Post
-          </button>
+
+          <DeleteButton post_id={post.id} />
         </div>
       ))}
     </div>
