@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import AllPosts from "./components/AllPosts";
-import Home from "./components/home";
+import Home from "./components/Home";
 import "./App.css";
 
 export default function App() {
