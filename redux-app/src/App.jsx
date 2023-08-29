@@ -8,15 +8,17 @@ export default function App() {
   return (
     <>
       <header>
-        <Link to="/AllPosts" className="posts">
-          {" "}
-          Posts{" "}
-        </Link>
-        <Link to="/Home" className="home">
-          {" "}
-          Home{" "}
-        </Link>
-        <h1> Stranger's Things</h1>
+        <p>
+          <Link to="/AllPosts" className="posts">
+            {" "}
+            Posts{" "}
+          </Link>
+          <Link to="/Home" className="home">
+            {" "}
+            Home{" "}
+          </Link>
+          <h1> Stranger's Things</h1>
+        </p>
       </header>
 
       <div>
