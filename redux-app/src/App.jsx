@@ -1,24 +1,22 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import AllPosts from "./components/AllPosts"; // Corrected component name
-import Home from "./components/home"; // Corrected component name
+import AllPosts from "./components/AllPosts";
+import Home from "./components/home";
 import "./App.css";
 
 export default function App() {
   return (
     <>
       <header>
-        <p>
-          <Link to="/AllPosts" className="posts">
-            {" "}
-            Posts{" "}
-          </Link>
-          <Link to="/Home" className="home">
-            {" "}
-            Home{" "}
-          </Link>
-          <h1> Stranger's Things</h1>
-        </p>
+        <Link to="/AllPosts" className="posts">
+          {" "}
+          Posts{" "}
+        </Link>
+        <Link to="/Home" className="home">
+          {" "}
+          Home{" "}
+        </Link>
+        <h1> Stranger's Things</h1>
       </header>
 
       <div>
