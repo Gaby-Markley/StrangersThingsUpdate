@@ -1,5 +1,5 @@
 import React from "react";
-import { deletePost } from "../API/Index";
+import { deletePost } from "../API";
 
 export default function deleteButton({ post_id }) {
   async function handleDelete() {
